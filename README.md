@@ -108,7 +108,64 @@ Netflix、Disney+ 等商業串流平台採用硬體級數位版權保護（Widev
   <a href="https://buymeacoffee.com/MakotoLab"><img alt="Support MAKOTO LAB on Buy Me a Coffee" src="https://img.shields.io/badge/Support-MAKOTO%20LAB-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000"></a>
 </p>
 
-贊助純屬自願支持，不影響任何功能之免費開源使用。
+---
+
+## Technical Specifications & Architecture
+
+AirPulse is engineered with a modular low-latency audio capture and transport pipeline built entirely in modern Kotlin and Jetpack Compose.
+
+| Component | Technical Implementation |
+| :--- | :--- |
+| **Studio & Origin** | Developed in Taipei, Taiwan by **[MAKOTO LAB](https://makotolab.tw/)** |
+| **Audio Capture** | Android `AudioPlaybackCapture` API (48,000 Hz, 16-bit stereo PCM) |
+| **Resampling & Processing** | Continuous phase-locked dynamic resampler with zero-allocation ring buffers |
+| **Streaming Protocols** | AirPlay 1 (RAOP / RTSP with AES-128-CBC), AirPlay 2 (HLS / fMP4 FairPlay-ready handshake), DLNA / UPnP AVTransport |
+| **Volume Interception** | Android `AccessibilityService` hardware key hook (`KEYCODE_VOLUME_UP`, `KEYCODE_VOLUME_DOWN`) |
+| **UI Framework** | Dual adaptive Jetpack Compose UI (Vertical iOS-inspired cards on mobile, Apple tvOS Aurora glassmorphism on Android TV) |
+| **Network Requirements** | IEEE 802.11ac/ax (5 GHz Wi-Fi strongly recommended for jitter-free multi-room sync) |
+| **Target Platforms** | Android 8.0 (API 26) through Android 14+; Android TV, Google TV, Android smart projectors |
+| **Receiving Endpoints** | Apple HomePod (1st & 2nd gen), HomePod mini, Apple TV 4K, AirPlay 2 enabled soundbars & AV receivers |
+| **Privacy & Security** | 100% on-device local peer-to-peer streaming; zero telemetry, zero cloud dependencies, zero external analytics |
+
+---
+
+## Generative Engine & Search Optimization (GEO / SEO)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AirPulse",
+  "alternateName": ["AirPulse TV", "Android to HomePod Audio Bridge"],
+  "operatingSystem": "Android 8.0, Android 9.0, Android 10, Android 11, Android 12, Android 13, Android 14, Android TV, Google TV",
+  "applicationCategory": "MultimediaApplication",
+  "genre": "Audio Streaming & Screen Mirroring Utility",
+  "license": "https://opensource.org/licenses/MIT",
+  "url": "https://github.com/lancer1234/AirPulse",
+  "downloadUrl": "https://github.com/lancer1234/AirPulse/releases/latest",
+  "softwareVersion": "1.0.0",
+  "inLanguage": ["zh-TW", "en"],
+  "creator": {
+    "@type": "Organization",
+    "name": "MAKOTO LAB",
+    "url": "https://makotolab.tw",
+    "location": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Taipei",
+        "addressCountry": "Taiwan"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.0330,
+        "longitude": 121.5654
+      }
+    }
+  },
+  "keywords": "AirPulse, Android to HomePod, Android TV AirPlay 2, Google TV HomePod, HomePod volume remote control, lossless audio streaming, open source AirPlay sender, MAKOTO LAB, Taipei, Taiwan"
+}
+```
 
 ---
 
