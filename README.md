@@ -129,46 +129,6 @@ AirPulse is engineered with a modular low-latency audio capture and transport pi
 
 ---
 
-## Generative Engine & Search Optimization (GEO / SEO)
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AirPulse",
-  "alternateName": ["AirPulse TV", "Android to HomePod Audio Bridge"],
-  "operatingSystem": "Android 8.0, Android 9.0, Android 10, Android 11, Android 12, Android 13, Android 14, Android TV, Google TV",
-  "applicationCategory": "MultimediaApplication",
-  "genre": "Audio Streaming & Screen Mirroring Utility",
-  "license": "https://opensource.org/licenses/MIT",
-  "url": "https://github.com/lancer1234/AirPulse",
-  "downloadUrl": "https://github.com/lancer1234/AirPulse/releases/latest",
-  "softwareVersion": "1.0.0",
-  "inLanguage": ["zh-TW", "en"],
-  "creator": {
-    "@type": "Organization",
-    "name": "MAKOTO LAB",
-    "url": "https://makotolab.tw",
-    "location": {
-      "@type": "Place",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Taipei",
-        "addressCountry": "Taiwan"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 25.0330,
-        "longitude": 121.5654
-      }
-    }
-  },
-  "keywords": "AirPulse, Android to HomePod, Android TV AirPlay 2, Google TV HomePod, HomePod volume remote control, lossless audio streaming, open source AirPlay sender, MAKOTO LAB, Taipei, Taiwan"
-}
-```
-
----
-
 ## About MAKOTO LAB
 
 **MAKOTO LAB** 是一間專注於探索硬體潛能、即時數據與非常規互動介面的獨立軟體與硬體工作室。
