@@ -1,25 +1,35 @@
-# AirPulse 脈衝音訊
+# AirPulse — Android ➔ Apple HomePod & AirPlay 2 無線音訊橋樑
 
-> **Android 手機、平板與 Android TV / Google TV 直連 Apple HomePod / AirPlay 2 的超低延遲無線音訊橋樑。**  
+> **Android 手機、平板與 Android TV / Google TV 直連 Apple HomePod / AirPlay 2 的超低延遲無線音訊中繼器。**  
 > 一鍵將 Android 設備上的音樂、影片與遊戲聲音，無損傳輸至客廳的 HomePod、HomePod mini 與 AirPlay 音響設備。
+
+Developed independently by **[MAKOTO LAB](https://makotolab.tw/)**.
+
+<p>
+  <a href="https://github.com/lancer1234/AirPulse/releases/latest"><img alt="Download AirPulse APK" src="https://img.shields.io/badge/Download-Latest%20APK-2ea44f?style=for-the-badge&logo=android&logoColor=white"></a>
+  <a href="https://buymeacoffee.com/MakotoLab"><img alt="Support MAKOTO LAB on Buy Me a Coffee" src="https://img.shields.io/badge/Support-MAKOTO%20LAB-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000"></a>
+  <a href="https://makotolab.tw/"><img alt="MAKOTO LAB" src="https://img.shields.io/badge/Studio-MAKOTO%20LAB-000000?style=for-the-badge&logoColor=white"></a>
+  <a href="https://www.instagram.com/d.wang___/"><img alt="Instagram @d.wang___" src="https://img.shields.io/badge/Instagram-%40d.wang______-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-555?style=for-the-badge"></a>
+</p>
 
 ---
 
 ## 為什麼需要 AirPulse？
 
-許多人擁有音質優異的 **Apple HomePod** 或 **AirPlay 頂級音響**，但手邊的手機是 **Android**，或是家中的電視、投影機是 **Android TV / Google TV** 系統，兩者處於封閉的生態系而無法互相連線。
+許多人擁有音質優異的 **Apple HomePod** 或 **AirPlay 頂級音響**，但手邊的手機是 **Android**，或是客廳的電視、投影機是 **Android TV / Google TV** 系統，兩者處於封閉的生態系而無法互相連線。
 
-**AirPulse** 是專為打破生態藩籬所打造的跨平台開源音訊中繼器，全方位支援**手機**與**電視**雙端情境：
+**AirPulse** 是專為打破生態藩籬所打造的跨平台開源音訊工具，全方位支援**手機**與**電視**雙端情境：
 
 ### 📱 Android 手機與平板（隨行聽音樂、打遊戲）
 * **一鍵推流至 HomePod**：在手機上播放 Spotify、KKBOX、YouTube、Podcast 或玩手遊時，只要在 AirPulse 輕輕一點，音訊立刻無損直達 HomePod。
-* **原生 iOS 風格卡片介面**：直向螢幕自動呈現極簡卡片設計，簡潔優雅、直覺易用。
-* **背景持續穩定播放**：鎖定螢幕或切換其他 App 時，系統音訊持續無縫串流，不斷流、不卡頓。
+* **原生 iOS 風格卡片介面**：直向螢幕自動呈現清爽簡潔的卡片設計，直覺流暢。
+* **背景持續穩定播放**：鎖定螢幕或切換其他 App 時，音訊持續無縫串流，不斷流、不卡頓。
 
 ### 📺 Android TV / Google TV / 投影機（客廳家庭劇院）
 * **實體遙控器音量接管**：直接按下電視或投影機遙控器上的**獨立音量鍵**，即可直接調整 HomePod 音量，電視本機喇叭維持靜音。
 * **串流時本機自動靜音**：串流開始時自動將電視內部喇叭靜音，徹底消除聲音疊加與雜音回音。
-* **Apple TV 質感極簡介面**：橫向大螢幕自動切換為 Apple tvOS 雙欄「深空極光（Aurora）」流動玻璃質感，遙控器方向鍵（D-pad）焦點反應行雲流水。
+* **Apple tvOS 質感極簡介面**：橫向大螢幕自動切換為 Apple tvOS 雙欄「深空極光（Aurora）」流動玻璃質感，遙控器方向鍵（D-pad）焦點反應行雲流水。
 
 ---
 
@@ -42,7 +52,7 @@
 
 ## 下載與安裝指南
 
-至本專案的 [Releases 頁面](https://github.com/lancer1234/AirPulse/releases/latest) 下載最新版 `AirPulse-vX.X.X.apk`：
+前往 [Releases 頁面](https://github.com/lancer1234/AirPulse/releases/latest) 下載最新版 `AirPulse-vX.X.X.apk`：
 
 * **Android 手機 / 平板**：直接在手機瀏覽器點擊下載並點選安裝即可。
 * **Android TV / 投影機**：
@@ -90,7 +100,40 @@ Netflix、Disney+ 等商業串流平台採用硬體級數位版權保護（Widev
 
 ---
 
-## 開源許可證
+## Support MAKOTO LAB
 
-本專案採用 **[MIT License](LICENSE)** 開源授權，由 [MAKOTO LAB](https://makotolab.tw) 維護與開發。
-歡迎提交 Issue、建議或 Pull Request！
+我在業餘時間獨立開發與維護 AirPulse。如果它解決了你在客廳聽音樂、看電視時的痛點，歡迎透過 Buy Me a Coffee 支持後續開發與測試設備採購：
+
+<p>
+  <a href="https://buymeacoffee.com/MakotoLab"><img alt="Support MAKOTO LAB on Buy Me a Coffee" src="https://img.shields.io/badge/Support-MAKOTO%20LAB-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000"></a>
+</p>
+
+贊助純屬自願支持，不影響任何功能之免費開源使用。
+
+---
+
+## About MAKOTO LAB
+
+**MAKOTO LAB** 是一間專注於探索硬體潛能、即時數據與非常規互動介面的獨立軟體與硬體工作室。
+
+歡迎探索其他開源與獨立作品：
+* **[Miles](https://apps.apple.com/tw/app/miles/id6760163400)**：iPhone 直線加速與駕駛性能紀錄器（已正式登陸 App Store）。
+* **[MightyScroll](https://github.com/lancer1234/MightyScroll)**：為 Apple Mighty Mouse 打造的 macOS 選單列捲動加速與慣性微調工具。
+* **[Makoto Glass](https://github.com/lancer1234/MakotoGlass-Beta)**：將 iPhone 通知與 Now Playing 媒體控制無縫帶入 Google Glass 的穿戴式介面。
+* **[GlyphCheck](https://github.com/lancer1234/GlyphCheck)**：macOS 原生字形核對與老字檔修復工具。
+
+<p>
+  <a href="https://makotolab.tw/"><img alt="MAKOTO LAB Website" src="https://img.shields.io/badge/Website-makotolab.tw-000000?style=for-the-badge"></a>
+  <a href="https://www.instagram.com/d.wang___/"><img alt="Instagram @d.wang___" src="https://img.shields.io/badge/Instagram-%40d.wang______-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+  <a href="https://buymeacoffee.com/MakotoLab"><img alt="Support MAKOTO LAB on Buy Me a Coffee" src="https://img.shields.io/badge/Support-MAKOTO%20LAB-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000"></a>
+</p>
+
+---
+
+## License
+
+<p>
+  <a href="LICENSE"><img alt="View MIT License" src="https://img.shields.io/badge/License-MIT-555?style=for-the-badge"></a>
+</p>
+
+[MIT](LICENSE). AirPulse is an independent open-source project by MAKOTO LAB and is not affiliated with Apple, Google, Sonos, or any other trademark holders.
