@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <!-- 投送期间持 Wi-Fi 高吞吐锁 + 部分唤醒锁，防切后台后 Wi-Fi 省电/CPU 降频断流 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 读取本机音/视频，用于 app 内媒体浏览器 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- app 内更新：下载新版 APK 后拉起系统安装器 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- Android TV Leanback 軟硬體聲明：TV 預設無觸控螢幕，宣告 false 避免被 TV Launcher 過濾 -->
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:banner="@drawable/tv_banner"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.AirPulse">
+        <!-- 投屏目标全是局域网明文 HTTP(UPnP/DLNA/Sonos :1400/SOAP)。Android 9+ 默认禁明文,
+             不开此项 HttpURLConnection 直接抛 IOException(Sonos 探测/DLNA 控制全挂)。
+             出站请求均经 LanHttp.pinLanUrl 限定 RFC1918 内网,故无额外暴露。 -->
+
+        <!-- 产品 UI 入口（Compose / 支援 TV 與手機） -->
+        <activity
+            android:name=".ui.StudioActivity"
+            android:exported="true"
+            android:banner="@drawable/tv_banner"
+            android:screenOrientation="unspecified"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 旧验证 Demo 菜单：降级为隐藏调试入口（设置页可进） -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PairingDemoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CaptureDemoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FileCastDemoActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".capture.CaptureProjectionService"
+            android:foregroundServiceType="mediaProjection"
+            android:exported="false" />
+
+        <!-- 遙控器音量鍵全域攔截服務：直接調整 HomePod 音量，完全不觸動投影機內建喇叭 -->
+        <service
+            android:name=".accessibility.AirSonicAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/airsonic_accessibility_service_config" />
+        </service>
+
+        <!-- 把下载好的更新 APK 以 content:// 暴露给系统安装器 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

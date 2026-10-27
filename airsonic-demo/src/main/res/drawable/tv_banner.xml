@@ -1,0 +1,80 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+
+    <!-- Minimalist Apple tvOS Obsidian Background -->
+    <path android:pathData="M0,0h320v180h-320z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0"
+                android:startY="0"
+                android:endX="320"
+                android:endY="180"
+                android:startColor="#1A1C24"
+                android:centerColor="#101217"
+                android:endColor="#07080B" />
+        </aapt:attr>
+    </path>
+
+    <!-- Subtle Ambient Radial Glow -->
+    <path android:pathData="M160,90 m-72,0 a72,72 0 1,0 144,0 a72,72 0 1,0 -144,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:gradientRadius="72"
+                android:centerX="160"
+                android:centerY="90"
+                android:startColor="#2E0A84FF"
+                android:endColor="#00000000"
+                android:type="radial" />
+        </aapt:attr>
+    </path>
+
+    <!-- Outer AirPlay Audio Wave (center 160,90 r=34) -->
+    <path
+        android:strokeWidth="6.5"
+        android:strokeLineCap="round"
+        android:pathData="M130.55,107.0 A34,34 0 1,1 189.45,107.0">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="126"
+                android:startY="56"
+                android:endX="194"
+                android:endY="107"
+                android:startColor="#64D2FF"
+                android:endColor="#0A84FF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Inner AirPlay Audio Wave (center 160,90 r=20) -->
+    <path
+        android:strokeWidth="6.5"
+        android:strokeLineCap="round"
+        android:pathData="M142.68,100.0 A20,20 0 1,1 177.32,100.0">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="140"
+                android:startY="70"
+                android:endX="180"
+                android:endY="100"
+                android:startColor="#80DCFF"
+                android:endColor="#0A84FF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Center Acoustic Point (160,90 r=5.2) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M160,90 m-5.2,0 a5.2,5.2 0 1,0 10.4,0 a5.2,5.2 0 1,0 -10.4,0" />
+
+    <!-- Rounded AirPlay Broadcast Triangle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M157.0,106.5 Q160.0,103.0 163.0,106.5 L178.0,125.5 Q181.0,129.5 176.0,129.5 L144.0,129.5 Q139.0,129.5 142.0,125.5 Z" />
+
+</vector>

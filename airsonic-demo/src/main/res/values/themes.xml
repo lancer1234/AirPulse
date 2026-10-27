@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.AirPulse" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/airsonic_primary</item>
+        <item name="colorPrimaryVariant">@color/airsonic_primary_dark</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+    <style name="Theme.AirSonic" parent="Theme.AirPulse" />
+</resources>

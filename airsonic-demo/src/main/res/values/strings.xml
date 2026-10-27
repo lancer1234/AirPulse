@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AirPulse TV</string>
+    <string name="accessibility_service_description">AirPulse 遙控器音量接管服務：直接透過遙控器音量鍵調整 HomePod 音量，完全不觸動電視/投影機內建喇叭音量。</string>
+</resources>

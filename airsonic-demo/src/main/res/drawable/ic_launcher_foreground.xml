@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer Concentric AirPlay Audio Wave (240-degree arc around 54,54 r=20) -->
+    <path
+        android:strokeWidth="4.6"
+        android:strokeLineCap="round"
+        android:pathData="M36.68,64.0 A20,20 0 1,1 71.32,64.0">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="34"
+                android:startY="34"
+                android:endX="74"
+                android:endY="64"
+                android:startColor="#64D2FF"
+                android:endColor="#0A84FF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Inner Concentric AirPlay Audio Wave (240-degree arc around 54,54 r=12) -->
+    <path
+        android:strokeWidth="4.6"
+        android:strokeLineCap="round"
+        android:pathData="M43.61,60.0 A12,12 0 1,1 64.39,60.0">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="42"
+                android:startY="42"
+                android:endX="66"
+                android:endY="60"
+                android:startColor="#80DCFF"
+                android:endColor="#0A84FF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Center Acoustic Point (54,54 r=3.4) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,54 m-3.4,0 a3.4,3.4 0 1,0 6.8,0 a3.4,3.4 0 1,0 -6.8,0" />
+
+    <!-- Iconic Rounded AirPlay Broadcast Triangle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52.2,63.8 Q54.0,61.6 55.8,63.8 L64.8,75.2 Q66.6,77.6 63.5,77.6 L44.5,77.6 Q41.4,77.6 43.2,75.2 Z" />
+
+</vector>

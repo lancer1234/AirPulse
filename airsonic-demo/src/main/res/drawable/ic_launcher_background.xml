@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Apple iOS 18 Dark Mode Obsidian Canvas -->
+    <path android:pathData="M0,0 H108 V108 H0 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="18"
+                android:startY="10"
+                android:endX="90"
+                android:endY="98"
+                android:startColor="#1C1E26"
+                android:centerColor="#101217"
+                android:endColor="#07080B" />
+        </aapt:attr>
+    </path>
+
+    <!-- Subtle Ambient Apple Blue Radial Glow -->
+    <path android:pathData="M54,54 m-42,0 a42,42 0 1,0 84,0 a42,42 0 1,0 -84,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="42"
+                android:startColor="#2E0A84FF"
+                android:endColor="#000A84FF" />
+        </aapt:attr>
+    </path>
+</vector>
